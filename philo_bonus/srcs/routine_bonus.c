@@ -6,7 +6,7 @@
 /*   By: twagner <twagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 22:37:46 by twagner           #+#    #+#             */
-/*   Updated: 2021/12/21 16:09:39 by twagner          ###   ########.fr       */
+/*   Updated: 2021/12/22 23:33:45 by twagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_get_id_str(int id, char (*tmp)[10])
 
 static int	ft_lonely_philo(t_philo *phi)
 {
+	ft_say_status(phi, ST_THINKING);
 	ft_say_status(phi, ST_FORK);
 	ft_usleep(phi->prm->timeto_die);
 	ft_say_status(phi, ST_DEAD);

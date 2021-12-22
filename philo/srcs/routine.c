@@ -6,7 +6,7 @@
 /*   By: twagner <twagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 22:37:46 by twagner           #+#    #+#             */
-/*   Updated: 2021/12/21 20:35:32 by twagner          ###   ########.fr       */
+/*   Updated: 2021/12/22 23:34:05 by twagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void	*ft_nurse(void *philo)
 
 static void	*ft_lonely_philo(t_philo *phi)
 {
+	ft_say_status(phi, ST_THINKING);
 	ft_say_status(phi, ST_FORK);
 	ft_usleep(phi->prm->timeto_die);
 	ft_say_status(phi, ST_DEAD);
